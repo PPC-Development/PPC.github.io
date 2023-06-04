@@ -1,0 +1,58 @@
+// nav background
+let header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 0) {
+    header.classList.add("shadow");
+  } else {
+    header.classList.remove("shadow");
+  }
+});
+
+//Filter
+$(document).ready(function () {
+    $(".filter-item").click(function () {
+        const value = $(this).attr("data-filter");
+        if (value == "all"){
+            $(".post-box").show("1000")
+        } else{
+            $(".post-box")
+                .not("." + value)
+                .hide(1000);
+            $(".post-box")
+            .filter("." + value)
+            .show("1000")
+        }
+    });
+    $(".filter-item").click(function () {
+        $(this).addClass("active-filter").siblings().removeClass("active-filter")
+    });
+});
+
+//Format
+function copyCode(event, button, url) {
+  event.preventDefault();
+
+  var code = 'loadstring(game:HttpGet("' + url + '"))()';
+
+  var tempInput = document.createElement('textarea');
+  tempInput.value = code;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand('copy');
+  document.body.removeChild(tempInput);
+
+  button.innerHTML = 'Copied';
+
+  setTimeout(function() {
+      button.innerHTML = 'Script';
+  }, 2000);
+}
+
+function openYouTube() {
+  window.open('https://www.youtube.com/@ProjectpopCat');
+}
+
+function openDiscord() {
+  window.open('https://discord.com/invite/2WXkCdZHVn');
+}
