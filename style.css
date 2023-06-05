@@ -344,9 +344,10 @@ footer p{
     color: #fff;
 }
 
-.sci{
-    margin: 20px;
+.sci {
+    margin-right: 10px;
     display: flex;
+    margin-top: 10px;
 }
 
 .sci li{
