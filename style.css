@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
-*{
+
+* {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -9,46 +10,46 @@
 }
 
 /* root values */
-:root{
+:root {
     --container-color: #1a1e21;
     --second-color: rgb(0, 0, 0);
     --text-color: #172317;
     --bg-color: #fff;
 }
 
-::selection{
+::selection {
     color: var(--bg-color);
     background: var(--second-color);
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-li{
+li {
     list-style: none;
 }
 
-img{
+img {
     width: 100%;
 }
 
-section{
+section {
     padding: 3rem 0 2rem;
 }
 
-.container{
+.container {
     max-width: 1068px;
     margin: auto;
     width: 100%;
 }
 
-a{
+a {
     color: #fff;
 }
 
 /* Header */
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -56,42 +57,42 @@ header{
     z-index: 200;
     background-color: transparent;
     transition: background-color 0.3s ease;
-} 
+}
 
-header.shadow{
+header.shadow {
     background: var(--bg-color);
     box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
     transition: .5s;
 }
 
-header.shadow .logo{
+header.shadow .logo {
     color: var(--second-color);
 }
 
-header.shadow .Discord{
+header.shadow .Discord {
     background: var(--second-color);
     color: var(--bg-color);
 }
 
-header.shadow .Youtube{
+header.shadow .Youtube {
     background: var(--second-color);
     color: var(--bg-color);
 }
 
-.nav{
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 40px 0;
 }
 
-.logo{
+.logo {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--bg-color);
 }
 
-.logo span{
+.logo span {
     color: var(--second-color);
 }
 
@@ -105,7 +106,7 @@ header.shadow .Youtube{
     margin-left: 600px;
 }
 
-.Youtube{
+.Youtube {
     padding: 8px 14px;
     text-transform: uppercase;
     font-weight: 500;
@@ -114,7 +115,7 @@ header.shadow .Youtube{
     color: var(--second-color);
 }
 
-.home{
+.home {
     width: 100%;
     min-height: 440px;
     background: url("images/Background.jpeg");
@@ -123,21 +124,21 @@ header.shadow .Youtube{
     align-items: center;
 }
 
-.home-text{
+.home-text {
     color: var(--bg-color);
     text-align: center;
 }
 
-.home-title{
+.home-title {
     font-size: 3.5rem;
 }
 
-.home-subtitle{
+.home-subtitle {
     font-size: 1rem;
     font-weight: 400;
 }
 
-.about{
+.about {
     position: relative;
     width: 100%;
     display: flex !important;
@@ -145,21 +146,21 @@ header.shadow .Youtube{
     align-items: center;
 }
 
-.about .contentBx{
+.about .contentBx {
     max-width: 50%;
     width: 50%;
     text-align: left;
     padding-right: 40px;
 }
 
-.titleText{
+.titleText {
     font-weight: 600;
     color: #111;
     font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.title-text{
+.title-text {
     color: #111;
     font-size: 1em;
 }
@@ -193,13 +194,13 @@ header.shadow .Youtube{
     border-radius: 4px;
 }
 
-.btn2:hover{
+.btn2:hover {
     background-color: var(--second-color);
     border: none;
     color: #fff;
 }
 
-.post-filter{
+.post-filter {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,34 +208,34 @@ header.shadow .Youtube{
     margin-top: 2rem !important;
 }
 
-.filter-item{
+.filter-item {
     font-size: 0.9rem;
     font-weight: 500;
     cursor: pointer;
 }
 
-.active-filter{
+.active-filter {
     background: var(--second-color);
     color: var(--bg-color);
     padding: 4px 10px;
     border-radius: 4px;
 }
 
-.post{
+.post {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, auto));
     justify-content: center;
     gap: 1.5rem;
 }
 
-.post-box{
+.post-box {
     background: var(--bg-color);
     box-shadow: 0 4px 14px hsl(35deg 25% 15% / 10%);
     padding: 15px;
     border-radius: 0.5rem;
 }
 
-.post-img{
+.post-img {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -242,14 +243,14 @@ header.shadow .Youtube{
     border-radius: 0.5rem;
 }
 
-.category{
+.category {
     font-size: 0.9rem;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--second-color);
 }
 
-.post-title{
+.post-title {
     font-size: 1.3rem;
     font-weight: 600;
     color: var(--text-color);
@@ -259,7 +260,7 @@ header.shadow .Youtube{
     overflow: hidden;
 }
 
-.post-date{
+.post-date {
     display: flex;
     font-size: 0.875rem;
     text-transform: uppercase;
@@ -267,7 +268,7 @@ header.shadow .Youtube{
     font-weight: 400;
 }
 
-.post-description{
+.post-description {
     font-size: 0.9rem;
     line-height: 1.5rem;
     margin: 5px 0 10px;
@@ -277,13 +278,13 @@ header.shadow .Youtube{
     overflow: hidden;
 }
 
-.profile{
+.profile {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.profile-img{
+.profile-img {
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -292,12 +293,12 @@ header.shadow .Youtube{
     border: 2px solid var(--second-color);
 }
 
-.profile-name{
+.profile-name {
     font-size: .8rem;
     font-weight: 500;
 }
 
-footer{
+footer {
     position: relative;
     width: 100%;
     height: auto;
@@ -309,28 +310,28 @@ footer{
     justify-content: space-between;
 }
 
-.footer-container{
+.footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row;
 }
 
-.footer-container .sec{
+.footer-container .sec {
     margin-right: 30px;
 }
 
-.footer-container .sec.aboutus{
+.footer-container .sec.aboutus {
     width: 40%;
 }
 
-.footer-container h2{
+.footer-container h2 {
     position: relative;
     color: #fff;
     margin-bottom: 15px;
 }
 
-.footer-container h2::before{
+.footer-container h2::before {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -340,7 +341,7 @@ footer{
     background: rgb(0, 0, 0);
 }
 
-footer p{
+footer p {
     color: #fff;
 }
 
@@ -350,11 +351,11 @@ footer p{
     margin-top: 10px;
 }
 
-.sci li{
+.sci li {
     list-style: none;
 }
 
-.sci li a{
+.sci li a {
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -368,25 +369,25 @@ footer p{
     transition: .5s;
 }
 
-.sci li a:hover{
+.sci li a:hover {
     background: rgb(0, 0, 0);
 }
 
-.sci i a .bx{
+.sci i a .bx {
     color: #fff;
     font-size: 20px;
 }
 
-.quicklinks{
+.quicklinks {
     position: relative;
     width: 25%;
 }
 
-.quicklinks ul li{
+.quicklinks ul li {
     list-style: none;
 }
 
-.quicklinks ul li a{
+.quicklinks ul li a {
     color: #999;
     text-decoration: none;
     margin-bottom: 10px;
@@ -394,51 +395,51 @@ footer p{
     transition: .3s;
 }
 
-.quicklinks ul li a:hover{
+.quicklinks ul li a:hover {
     color: #fff;
 }
 
-.footer-container .contactBx{
+.footer-container .contactBx {
     width: calc(35% - 60px);
     margin-right: 0 !important;
 }
 
-.contactBx .info{
+.contactBx .info {
     position: relative;
 }
 
-.contactBx .info li{
+.contactBx .info li {
     display: flex !important;
     margin-bottom: 16px;
 }
 
-.contactBx .info li span:nth-child(1){
+.contactBx .info li span:nth-child(1) {
     color: #fff;
     font-size: 20px;
     margin-right: 10px;
 }
 
-.contactBx .info li span{
+.contactBx .info li span {
     color: #999;
 }
 
-.contactBx .info li a{
+.contactBx .info li a {
     color: #999;
     text-decoration: none;
     transition: .5s;
 }
 
-.contactBx .info li a:hover{
+.contactBx .info li a:hover {
     color: #fff;
 }
 
-@media (max-width: 1060px){
-    .container{
+@media (max-width: 1060px) {
+    .container {
         margin: 0 auto;
         width: 80%;
     }
 
-    .home-text{
+    .home-text {
         width: 100%
     }
 }
@@ -447,35 +448,35 @@ footer p{
     .nav {
         padding: 6px 0;
     }
-    
+
     .header-content {
         margin-top: 3rem !important;
     }
 
     .logo {
         display: none;
-    }   
-    
+    }
+
     .home {
         min-height: 380px;
     }
-    
+
     .home-title {
         font-size: 3rem;
     }
-    
+
     .header-title {
         font-size: 2rem;
     }
-    
+
     .header-img {
         height: 370px;
     }
-    
+
     .about {
         flex-direction: column;
     }
-    
+
     .about .contentBx,
     .about .imgBx {
         min-width: 100%;
@@ -483,19 +484,19 @@ footer p{
         padding-right: 0px;
         text-align: center;
     }
-    
+
     .about .imgBx {
         min-height: 250px;
     }
-    
+
     .btn2 {
         margin-bottom: 30px;
     }
-    
+
     .post-header {
         height: 435px;
     }
-    
+
     .post-header {
         margin-top: 9rem !important;
     }
@@ -505,11 +506,11 @@ footer p{
     .post-header {
         height: 390px;
     }
-    
+
     .header-title {
         width: 100%;
     }
-    
+
     .header-img {
         height: 340px;
     }
@@ -519,98 +520,95 @@ footer p{
     .home-title {
         font-size: 2rem;
     }
-    
+
     .home-subtitle {
         font-size: 0.9rem;
     }
-    
+
     .home {
         min-height: 300px;
     }
-    
+
     .post-box {
         padding: 10px;
     }
-    
+
     .header-title {
         font-size: 1.4rem;
     }
-    
+
     .header-img {
         height: 240px;
     }
-    
+
     .post-header {
         height: 335px;
     }
-    
+
     .header-img {
         height: 340px;
     }
 }
 
-@media (max-width: 396px){
-    .home-title{
+@media (max-width: 396px) {
+    .home-title {
         font-size: 2rem;
     }
 
-    .home-subtitle{
+    .home-subtitle {
         font-size: 0.9rem;
     }
 
-    .home{
+    .home {
         min-height: 300px;
     }
 
-    .post-box{
+    .post-box {
         padding: 10px;
     }
 
-    .header-title{
+    .header-title {
         font-size: 1.4rem;
     }
 
-    .header-img{
+    .header-img {
         height: 240px;
     }
 
-    .post-header{
+    .post-header {
         height: 335px;
     }
 
-    .header-img{
+    .header-img {
         height: 340px;
     }
 }
 
 /* Footer Media Query */
-@media (max-width: 991px){
-    footer{
+@media (max-width: 991px) {
+    footer {
         padding: 4px;
         font-size: 14px;
     }
 
-    footer .footer-container{
+    footer .footer-container {
         flex-direction: column;
     }
 
-    footer .footer-container .sec{
+    footer .footer-container .sec {
         margin-right: 0;
         margin-bottom: 40px;
     }
 
-    footer .footer-container .sec.aboutus{
+    footer .footer-container .sec.aboutus {
         width: 100% !important;
     }
 
-    footer .footer-container .quicklinks{
+    footer .footer-container .quicklinks {
         width: 100%;
     }
 
-    footer .footer-container .contactBx{
+    footer .footer-container .contactBx {
         width: 100%;
     }
 }
-
-
-
