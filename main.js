@@ -1,3 +1,30 @@
+// Funktion zur Initialisierung des Counters
+function initCounter() {
+    // Überprüfen, ob der Counter bereits im Local Storage vorhanden ist
+    if (!localStorage.getItem('globalCopyCounter')) {
+        // Wenn nicht, setze den Counter auf 0
+        localStorage.setItem('globalCopyCounter', 0);
+    }
+}
+
+// Funktion zum Aktualisieren des Counters
+function updateCounter() {
+    // Counterwert aus dem Local Storage abrufen und um 1 erhöhen
+    let counter = parseInt(localStorage.getItem('globalCopyCounter')) || 0;
+    counter++;
+    // Counterwert im Local Storage aktualisieren
+    localStorage.setItem('globalCopyCounter', counter);
+    // Counter auf der Seite aktualisieren
+    document.getElementById('globalCopyCounter').textContent = counter;
+}
+
+// Event Listener hinzufügen, um den Counter zu aktualisieren, wenn das Skript kopiert wird
+document.getElementById('copyButton').addEventListener('click', function(event) {
+    // Counter aktualisieren
+    updateCounter();
+    // Hier den Code zum Kopieren des Skripts einfügen
+});
+
 // nav background
 let header = document.querySelector("header");
 
@@ -29,12 +56,11 @@ $(document).ready(function () {
 
 // On page load
 document.addEventListener('DOMContentLoaded', function () {
-  // Initialisiere den Counter, falls noch nicht vorhanden
-  var copyCounter = localStorage.getItem('copyCounter');
-  if (copyCounter === null) {
-    localStorage.setItem('copyCounter', 0);
-  } else {
-    document.getElementById('copyCounter').textContent = copyCounter;
+  // Initialisiere den Counter
+  initCounter();
+  var copyCounter = localStorage.getItem('globalCopyCounter');
+  if (copyCounter) {
+    document.getElementById('globalCopyCounter').textContent = copyCounter;
   }
 });
 
@@ -53,18 +79,12 @@ function copyCode(event, button, url) {
   button.innerHTML = 'Copied';
 
   // Update Counter
-  var copyCounter = localStorage.getItem('copyCounter');
-  copyCounter = parseInt(copyCounter) + 1;
-  localStorage.setItem('copyCounter', copyCounter);
-  document.getElementById('copyCounter').textContent = copyCounter;
+  updateCounter();
 
   setTimeout(function() {
       button.innerHTML = 'Script';
   }, 2000);
 }
-
-
-
 
 function openYouTube() {
   window.open('https://www.youtube.com/@ProjectpopCat');
