@@ -29,9 +29,11 @@ $(document).ready(function () {
 
 // On page load
 document.addEventListener('DOMContentLoaded', function () {
-  // Initialisiere den Counter
+  // Initialisiere den Counter, falls noch nicht vorhanden
   var copyCounter = localStorage.getItem('copyCounter');
-  if (copyCounter) {
+  if (copyCounter === null) {
+    localStorage.setItem('copyCounter', 0);
+  } else {
     document.getElementById('copyCounter').textContent = copyCounter;
   }
 });
@@ -52,12 +54,7 @@ function copyCode(event, button, url) {
 
   // Update Counter
   var copyCounter = localStorage.getItem('copyCounter');
-  if (copyCounter) {
-    copyCounter = parseInt(copyCounter);
-    copyCounter += 1;
-  } else {
-    copyCounter = 1;
-  }
+  copyCounter = parseInt(copyCounter) + 1;
   localStorage.setItem('copyCounter', copyCounter);
   document.getElementById('copyCounter').textContent = copyCounter;
 
@@ -65,6 +62,7 @@ function copyCode(event, button, url) {
       button.innerHTML = 'Script';
   }, 2000);
 }
+
 
 
 
