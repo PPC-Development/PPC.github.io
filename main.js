@@ -27,7 +27,15 @@ $(document).ready(function () {
   });
 });
 
-//Format
+// On page load
+document.addEventListener('DOMContentLoaded', function () {
+  // Initialisiere den Counter
+  var copyCounter = localStorage.getItem('copyCounter');
+  if (copyCounter) {
+    document.getElementById('copyCounter').textContent = copyCounter;
+  }
+});
+
 function copyCode(event, button, url) {
   event.preventDefault();
 
@@ -57,6 +65,8 @@ function copyCode(event, button, url) {
       button.innerHTML = 'Script';
   }, 2000);
 }
+
+
 
 function openYouTube() {
   window.open('https://www.youtube.com/@ProjectpopCat');
