@@ -42,14 +42,20 @@ function copyCode(event, button, url) {
 
   button.innerHTML = 'Copied';
 
+  // Update Counter
+  var copyCounter = localStorage.getItem('copyCounter');
+  if (copyCounter) {
+    copyCounter = parseInt(copyCounter);
+    copyCounter += 1;
+  } else {
+    copyCounter = 1;
+  }
+  localStorage.setItem('copyCounter', copyCounter);
+  document.getElementById('copyCounter').textContent = copyCounter;
+
   setTimeout(function() {
       button.innerHTML = 'Script';
   }, 2000);
-
-  // Hier können Sie den Counter aktualisieren
-  var counterSpan = document.getElementById("copyCounter");
-  var currentCount = parseInt(counterSpan.innerText);
-  counterSpan.innerText = currentCount + 1;
 }
 
 function openYouTube() {
