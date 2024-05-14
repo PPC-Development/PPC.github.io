@@ -45,6 +45,11 @@ function copyCode(event, button, url) {
   setTimeout(function() {
       button.innerHTML = 'Script';
   }, 2000);
+
+  // Hier können Sie den Counter aktualisieren
+  var counterSpan = document.getElementById("copyCounter");
+  var currentCount = parseInt(counterSpan.innerText);
+  counterSpan.innerText = currentCount + 1;
 }
 
 function openYouTube() {
